@@ -1,0 +1,27 @@
+@import "../BrandColours";
+
+@mixin selected-state {
+	background-color: $button !important;
+	color: white !important;
+}
+
+.genre-section {
+	font-family: 'Pangolin', cursive;
+}
+
+.genre-button {
+	margin-right: 10px;
+	margin-top: 5px;
+	letter-spacing: 2px !important;
+	background-color: transparent;
+	color: $button;
+	border-color: $button;
+	font-size: 20px;
+	&:hover, &:active, &:focus {
+		@include selected-state();
+	}
+}
+
+.genre-button.selected {
+	@include selected-state();
+}
